@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /* var data = new Date(); */
+
+      /*  document.write(data.getDate() +`/ ` + (data.getMonth() + 1) + ` / ` + (data.getFullYear())) */
+
+      // adicionar / remover dias
+      /*  document.write(data.toString())
+        data.setDate(data.getDate()+365 )
+        document.write ('<hr>')
+        document.write(data.toString())
+        document.write ( '<br/> <br/>' , '<hr>')
+
+         // adicionar / remover meses 
+         document.write(data.toString())
+        data.setMonth(data.getMonth()+1)
+        document.write ('<hr>')
+        document.write(data.toString())
+        document.write ( '<br/> <br/>' , '<hr>')
+
+         // adicionar / remover anos
+         document.write(data.toString())
+        data.setFullYear(data.getFullYear()+1)
+        document.write ('<hr>')
+        document.write(data.toString()) */
+
+      //15/01/2023
+
+      /* var data1 = new Date(2017, 0, 15);
+
+      // 23/02/2023
+      var data2 = new Date(2017, 1, 23);
+
+      document.write(data1.toString());
+      document.write("<hr>");
+      document.write(data2.toString());
+
+      document.write("<br> <br> <hr>");
+      // converte datas para algo que possamos calcular
+
+      document.write(data1.getTime());
+      document.write("<hr>");
+      document.write(data2.getTime());
+      // 1 de janeiro de 1970
+      
+      document.write("<br> <br> <hr>");
+
+      // econtrar a quantidade milisegundo entre a data 1 e data 2
+      //Metodo ABS Ele conforte o numero negativo para positivo
+      var milesegundas_entre_datas = (Math.abs(data1.getTime() - data2.getTime()));
+      document.write (milesegundas_entre_datas)
+      document.write("<br> <br> <hr>");
+
+      // quantos milesegundas tem um dia ?
+      var milesegundas_por_dia = (1*24*60*60*1000)
+      document.write('1 dia tem : ' + milesegundas_por_dia + 'milisegundos ' )
+
+      document.write("<br> <br> <hr>");
+      document.write (Math.ceil (milesegundas_entre_datas / milesegundas_por_dia)) */
+
+      var num1 = prompt ('Digite o primeiro numero ')
+      var operacao = prompt ('Digite (soma) para somar o valor || ou (menos) para subtrair' )
+      var num2 = prompt ('Digite o segundo valor: ')
+
+      num1 = parseInt(num1);
+      num2 = parseInt(num2)
+
+      let resultado = 0
+      resulta = function (num1,num2,operacao) {
+
+      switch (operacao)
+      {
+case 'soma':
+    resultado = num1+num2
+    break;
+
+    case 'menos':
+        resultado = num1-num2
+        break;
+      }
+return resultado
+
+    }
+    document.write('O resultado é:' + resulta (num1,num2,operacao))
+    
+    </script>
+
+  </head>
+  <body>
+    </body>
+</html>

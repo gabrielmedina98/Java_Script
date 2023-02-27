@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escopo Várivaveis</title>
+    <script>
+
+        // 3 escopos: global, função e o bloco!
+
+        /* Escopo função e bloco visualizam escopo global */
+
+        /* váriveis declarada dentro do escopo de bloco sofrem elevação (hoisting (*/
+
+
+var serie =  'friends'
+
+if (true){
+    document.write(serie)
+    var serie2 = 'game of'
+
+}
+document.write(serie2)
+
+document.write('<br/>')
+
+function x(){
+    var serie3 = 'The Walking Dead'
+    /* Nãi vai sofrer  */
+    document.write(serie)
+    document.write (serie2)
+}
+  x()
+  document.write ('<br>')
+  document.write (serie3)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

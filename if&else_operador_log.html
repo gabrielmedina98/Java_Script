@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //operador lógico (!) negação inverte a lógica do resultado
+
+      /*  if(!(4==2)){
+            document.write('verdadeiro')
+        }else{
+            document.write('falso')
+        } */
+
+      var nota1 = prompt("Digite sua nota1");
+      var faltas = prompt('Digite numero de faltas: ')
+      var faltas_Permitidas = 15
+      var media = 7
+
+    
+     /*  if (nota1 >= media && faltas<faltas_Permitidas) {
+        document.write(" Aprovado");
+      } else {
+        document.write(" Reprovado");
+      } */
+
+      //operador ternário
+      var resultado = (nota>= media && faltas <=faltas_Permitidas) ? 'Aprovado' :  'Reprovado'
+      document.write(resultado)
+
+    </script>
+  </head>
+  <body></body>
+</html>
