@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+function acao1(){
+    alert('evento pressionado')
+
+}
+    </script>
+</head>
+<body>
+    <!-- quando tecla e pressionada ela aciona o evento e so apos o caractere e mostrado -->
+    <!-- <input onkeydown="acao()" type="text"> -->
+
+    <!-- quando tecla e pressionada o caractere aparece primeiro a depois o evento e disparado -->
+   <!--   <input onkeyup="acao1()" type="text">  -->
+
+     <!-- onkeypress e basicamente a mesma coisa do onkeypress , no entanto ele acontece quando a tecla respresenta um caractere (a,c,$,~,) teclas como (alt, ctrl) o evento não sera disparado  -->
+    <input onkeypress="acao1()" type="text"> 
+</body>
+</html>
