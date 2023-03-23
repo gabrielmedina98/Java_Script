@@ -37,7 +37,8 @@ function mediaAluno (nota1,nota2){
 }
 
 function Aluno (nome, curso) {
-    var mensagem = "Seja bem-vindo " + nome + " ao curso de " +  curso;
+    var mensagem = "Seja bem-vindo " 
+    + nome + " ao curso de " +  curso;
     console.log(mensagem);
 }
 
