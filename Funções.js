@@ -61,8 +61,8 @@ var comprimento = prompt ('Digite o comprimento do terro : ')
 
  */
 /* Parametros , podemos passar diferços parametros para as funções  */
- function soma (a,b){
+ /* function soma (a,b){
     return a+b;
  }
  console.log(soma(7,7))
- console.log (soma(7,7,9,15))
+ console.log (soma(7,7,9,15)) */

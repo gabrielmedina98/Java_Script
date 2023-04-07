@@ -13,14 +13,10 @@
 
     O método toString() converte um array em uma string de valores(separados por vírgula).
 
-   
-    
     
     
     O método join() permite especificar um separador:
     
-    
-    ​
     
     - Adicionando elementos a um array : push() e unshift()
     O método push() adiciona um novo elemento ao final de um array.
@@ -33,10 +29,7 @@
     
     - Podemos usar o método unshift() incluir um novo elemento no início do array :
     
-    
-    
-    
-    
+
     - Removendo elementos de um array : pop() e shift()
     
     O método pop() remove o último elemento de um array.
@@ -46,23 +39,27 @@
     
     Podemos usar o método shift() para remover o primeiro elemento e deslocar os demais elementos para um índice menor:
     
-    
-    
-    
-    
     - Concatenando arrays
     
     O método concat() cria um novo array mesclando arrays existentes:
-    
     
     Este método não altera os arrays existentes ele apenas cria um novo array : criancas com os conteudos dos dois arrays.
     
     Vamos pra proxima aula :)
 
-
     <script>
-        var lista_frutas = Array()
+      let student = {
+        name:'gabriel',
+        age: 25,
+        weight: 72.5,
+        isSubscribed: true,
         
+     }
+      /*   console.log(`${student.name} de idade ${student.age} pesa ${student.weight}`)  */
+
+        let students = []
+        students = [student]
+        console.log(students[0])
     </script>
 
 </body>
