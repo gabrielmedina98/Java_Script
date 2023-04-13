@@ -64,5 +64,5 @@ console.log(
     techs.splice(index,1)
 
 
-     console.log(techs); 
+     console.log(); 
 
