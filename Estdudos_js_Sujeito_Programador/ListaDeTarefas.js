@@ -2,12 +2,16 @@ let listElement = document.querySelector ("#app ul");
 let inputElement = document.querySelector ("#app input");
 let buttonElement = document.querySelector ("#app button");
 
-let tarefas = [];
+//Antes de iniciar a várivel precisamos converte ela para lista novamente , pois no final do código foi convertida para uma string.
+//JSON.parse =  converte para lista.
+
+let tarefas = JSON.parse(localStorage.getItem("@listaTarefas")) || [];
+// ele vai tentar buscar caso não tenha nada irá mostrar uma lista vazia
 
 function renderTarefas(){
     listElement.innerHTML = "" ; // nessa linha de código estou acessando a tag  ul do html que está dentro da div com id #app e também estou limpando ela deixando vazia caso haja alguma coisa dentro dela.
 
-   tarefas.map((todo) =>{
+   tarefas.map((todo) =>{ // map seria para percorrer o o array
 let liElement =  document.createElement ("li"); // vou criar um elemento no meu visual do html do tipo li
 let tarefaText =  document.createTextNode(todo); // vou criar um tipo de texto que será as tarefas digitadas
 
@@ -41,6 +45,8 @@ listElement.appendChild(liElement);
    // o parâmetro (todo) eu vou ter acesso ao item que foi cadastrado 
 }
 
+renderTarefas(); //  toda vez que usuário abrir ja vai renderizar caso tenha alguma tarefa;
+
 function adicionarTarefas (){
     if (inputElement.value === ""){
         alert ("Digite alguma tarefa");
@@ -53,6 +59,7 @@ function adicionarTarefas (){
         inputElement.value = '' // deixara o campo vazio para futuramente poder digitar outra tarefa
 
         renderTarefas(); // nessa linha de código estou falando para ele renderizar a minha nova tarefa, ou seja, mostrar novamente.
+        salvarDados(); // para chamar a função
     }
 }
 
@@ -64,4 +71,13 @@ buttonElement.onclick = adicionarTarefas;
 function deletarTarefa(posicao){
     tarefas.splice(posicao,1)
     renderTarefas(); //  nessa linha de código estou falando para ele renderizar a minha nova tarefa, ou seja, mostrar novamente.
+    salvarDados(); 
+}
+
+function salvarDados(){ // essa função irá salvar local do navegador (não é um banco de dados)
+    localStorage.setItem("@listaTarefas", JSON.stringify(tarefas))
+    // usamos o objeto localStorage
+    // o setItem  =  ou seja eu quero salvar algo no meu localStorage
+    // e preciso passar dois parÂmetros sendo, uma chave única para poder identicar e o segundo o que seria o que quer salvar.
+    //JSON.stringify = está sendo usado para converte a lista em uma string , para sim poder salvar no local, mas na váriavel tarefas vc precisaria voltar ela para um lista . 
 }
