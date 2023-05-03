@@ -28,22 +28,32 @@ let names   = ['gabrie', 'rodrigues' , 'pedro'] */
     
 } */
 
- /* for (let name  of names ) { // dessa forma o for of ira imprir cada string dentro array em forma vertical
-    console.log(name);
-    
-}  */
+//----------
+
+//Exemplo usando o for of --- percorremos o valor dentro dele.
+/* let notas = [100,50,70,
+72,60,85,50,98,65]
+let aprovado = 0
+let reprovado = 0
+
+    for (const n of notas) {
+        n>=60 ? aprovado++:reprovado++
+    }
+    console.log(`Aprovados ${aprovado}`);
+    console.log(`Reprovados ${reprovado}`); */
+
 
 //loop de propriedades
-let person =  {
+/* let person =  {
     name: 'gabriel',
     age: 25,
     weight : 72.2
-}
+} */
 
-for (const property in person) {
-    console.log(property);
-   // console.log(person.name)
-    console.log(person[property])
+/* for (const property in person) {
+    console.log(property); // informa quais são os objetos 
+   //console.log(person.name) // informa a quandtidade de objetos que possui
+    console.log(person[property]) // informa seus respectivos valores
         
-    }
-
+    } 
+ */
