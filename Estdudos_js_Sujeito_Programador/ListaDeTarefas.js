@@ -24,7 +24,6 @@ linkText = document.createTextNode(" Excluir"); // Essa código informa qual ser
 linkElement.appendChild(linkText) // essa código pega o texto que foi criado e coloca dentro da tag (a) que foi criada pelo linkElement
 
 let posicao =  tarefas.indexOf(todo)
-
 //linkElement.setAttribute("onclick", `deletarTarefa(${posicao})`) ---- É UMA FORMA PARA NAVEGADORES MAIS ANTIGOS QUE NÃO SUPORTÃO O OUVINTE addEventListener
 linkElement.addEventListener('click', () => {
     deletarTarefa(posicao);
